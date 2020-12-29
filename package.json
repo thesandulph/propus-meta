@@ -21,7 +21,7 @@
         "lint"
     ],
     "scripts": {
-        "lint": "echo \"LINITING comming soon!\"",
+        "lint": "echo \"LINTING comming soon!\"",
         "clean": "rimraf dist node_modules package-lock.json yarn.lock",
         "postclean": "yarn cache clean",
         "prerefresh": "yarn clean",
@@ -34,6 +34,7 @@
     },
     "dependencies": {
         "@propus/control": "^0.0.7",
+        "@propus/core": "^0.0.4",
         "prop-types": "^15.7.2",
         "react": "^17.0.1",
         "react-helmet": "^6.1.0"
