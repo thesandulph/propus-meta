@@ -1,7 +1,7 @@
 import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {When} from '@propus/control';
-import {useMetaContext} from '../context';
+import {useMetaContext} from '../MetaContext';
 
 const Description = ({content}) => {
     const {meta} = useMetaContext();

@@ -2,7 +2,7 @@ import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {When} from '@propus/control';
 import {toArray} from '@propus/utility';
-import {useMetaContext} from '../context';
+import {useMetaContext} from '../MetaContext';
 
 const Keywords = ({content}) => {
     const {meta} = useMetaContext();
