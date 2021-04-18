@@ -1,11 +1,10 @@
 import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {When} from '@propus/control';
-import {useMetaContext} from '../context';
+import {withMeta} from './MetaContext';
 
-const Title = ({content}) => {
-    const {meta} = useMetaContext();
-    const text = useMemo(() => meta.textFormatter(content), [content]);
+const Title = ({format, content}) => {
+    const text = useMemo(() => format(content), [content]);
     return (
         <When condition={text}>
             <title>{text}</title>
@@ -16,6 +15,7 @@ const Title = ({content}) => {
 };
 
 Title.propTypes = {
+    format: PropTypes.func.isRequired,
     content: PropTypes.any,
 };
 
@@ -23,4 +23,4 @@ Title.defaultProps = {
     content: null,
 };
 
-export default memo(Title);
+export default memo(withMeta(Title));

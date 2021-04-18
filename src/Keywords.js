@@ -2,11 +2,10 @@ import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {When} from '@propus/control';
 import {toArray} from '@propus/utility';
-import {useMetaContext} from '../MetaContext';
+import {withMeta} from './MetaContext';
 
-const Keywords = ({content}) => {
-    const {meta} = useMetaContext();
-    const text = useMemo(() => toArray(content).map(item => meta.textFormatter(item)).join(', '), [content]);
+const Keywords = ({format, content}) => {
+    const text = useMemo(() => toArray(content).map(item => format(item)).join(', '), [content]);
     return (
         <When condition={text}>
             <meta name="keywords" content={text}/>
@@ -15,13 +14,12 @@ const Keywords = ({content}) => {
 };
 
 Keywords.propTypes = {
+    format: PropTypes.func.isRequired,
     content: PropTypes.any,
 };
 
 Keywords.defaultProps = {
-    content: null,
+    content: '',
 };
 
-export default memo(Keywords, (prevProps, nextProps) => {
-    return prevProps.content === nextProps.content;
-});
+export default memo(withMeta(Keywords));

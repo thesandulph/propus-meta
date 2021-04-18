@@ -1,11 +1,10 @@
 import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {When} from '@propus/control';
-import {useMetaContext} from '../context';
+import {withMeta} from './MetaContext';
 
-const Name = ({content}) => {
-    const {meta} = useMetaContext();
-    const text = useMemo(() => meta.textFormatter(content), [content]);
+const Name = ({format, content}) => {
+    const text = useMemo(() => format(content), [content]);
     return (
         <When condition={text}>
             <meta name="twitter:site" content={text} />
@@ -17,6 +16,7 @@ const Name = ({content}) => {
 };
 
 Name.propTypes = {
+    format: PropTypes.func.isRequired,
     content: PropTypes.any,
 };
 
@@ -24,4 +24,4 @@ Name.defaultProps = {
     content: null,
 };
 
-export default memo(Name);
+export default memo(withMeta(Name));

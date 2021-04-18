@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {
     isUrl,
@@ -6,12 +6,15 @@ import {
 } from '@propus/utility';
 import {When} from '@propus/control';
 
-const Image = ({content}) => (
-    <When condition={isUrl(content) || isPath(content)}>
-        <meta property="og:image" content={content}/>
-        <meta name="twitter:image" content={content}/>
-    </When>
-);
+const Image = ({content}) => {
+    const valid = useMemo(() => isUrl(content) || isPath(content), [content]);
+    return (
+        <When condition={valid}>
+            <meta property="og:image" content={content}/>
+            <meta name="twitter:image" content={content}/>
+        </When>
+    );
+};
 
 Image.propTypes = {
     content: PropTypes.any,

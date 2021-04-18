@@ -4,6 +4,10 @@
 4. Write documentation
 5. Complete package info
 6. Add dictionary file
-
-7. Favicon component
+7. Icon component
 8. PWA component
+9. Reset component
+10. Responsive component
+11. Memoize components
+   
+

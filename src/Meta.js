@@ -1,36 +1,32 @@
 import React, {memo} from 'react';
 import PropTypes from 'prop-types';
 import {Helmet} from 'react-helmet';
-import {Canonical} from './canonical';
-import {Description} from './description';
-import {Image} from './image';
-import {Keywords} from './keywords';
-import {Name} from './name';
-import {Title} from './title';
+import Canonical from './canonical';
+import Description from './description';
+import Image from './image';
+import Keywords from './keywords';
+import Name from './name';
+import Title from './title';
 
-
-const Meta = ({children, component: Component, ...props}) => (
-    <Component {...props}>
-        {children}
-    </Component>
+const PureMeta = ({component: Component, ...props}) => (
+    <Component {...props} />
 );
 
-Meta.propTypes = {
-    children: PropTypes.node,
+PureMeta.propTypes = {
     component: PropTypes.any,
 };
 
-Meta.defaultProps = {
-    children: null,
+PureMeta.defaultProps = {
     component: Helmet,
 };
 
-const MemoizedMeta = memo(Meta);
-MemoizedMeta.Canonical = Canonical;
-MemoizedMeta.Description = Description;
-MemoizedMeta.Image = Image;
-MemoizedMeta.Keywords = Keywords;
-MemoizedMeta.Name = Name;
-MemoizedMeta.Title = Title;
+const Meta = memo(Meta);
+Meta.render = Helmet.renderStatic;
+Meta.Canonical = Canonical;
+Meta.Description = Description;
+Meta.Image = Image;
+Meta.Keywords = Keywords;
+Meta.Name = Name;
+Meta.Title = Title;
 
-export default MemoizedMeta;
+export default Meta;

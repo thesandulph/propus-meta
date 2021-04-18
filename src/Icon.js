@@ -1,14 +1,14 @@
 import React, {memo} from 'react';
 import PropTypes from 'prop-types';
 
-const Favicon = ({content}) => null;
+const Icon = ({content}) => null;
 
-Favicon.propTypes = {
+Icon.propTypes = {
     content: PropTypes.any,
 };
 
-Favicon.defaultProps = {
+Icon.defaultProps = {
     content: null,
 };
 
-export default memo(Favicon);
+export default memo(Icon);
