@@ -1,6 +1,6 @@
 {
     "name": "@propus/meta",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "description": "Propus coming soon...",
@@ -33,8 +33,8 @@
         "prepublishOnly": "yarn build:publish"
     },
     "dependencies": {
-        "@propus/control": "^0.0.8",
-        "@propus/core": "^0.0.5",
+        "@propus/control": "^0.0.9",
+        "@propus/core": "^0.0.6",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-helmet": "^6.1.0"

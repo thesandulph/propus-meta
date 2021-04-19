@@ -932,28 +932,28 @@
     readdirp "^2.2.1"
     upath "^1.1.1"
 
-"@propus/control@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@propus/control/-/control-0.0.8.tgz#7f81b43781fe80c085f80075283877221a9670d6"
-  integrity sha512-FUmDJ8+iJO+PmThJw4pr6FU0Zc7ElTQOvLHcSWDyl6kNoAeVLZZyASC/MXCabFKVEYp+5xkhVdIRBzIMkhjVfQ==
+"@propus/control@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@propus/control/-/control-0.0.9.tgz#d4e7ab1f77f83e4f62bda01f3f7e0ec8c03cab9a"
+  integrity sha512-+Hra63CEESdtoQmLY2hYvQbe5cDG3qfi2qUlfdnNSs1xSOG348828PfMfkrd71iM2M9bZwditeQxBbWbLMt3Ow==
   dependencies:
-    "@propus/utility" "^0.0.11"
+    "@propus/utility" "^0.0.12"
     prop-types "^15.7.2"
     react "^17.0.2"
 
-"@propus/core@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@propus/core/-/core-0.0.5.tgz#b194a5ce68ef1f88cd8be6a78a8849ae4cf4eb86"
-  integrity sha512-K6cNiBpnNyWOHZzz4nmW49XLbAnOlTxPc2GzUKrNhhhrKwzPe+FSqe1QU4wcDp2qvalA0huZWELIMbw0bo0v5w==
+"@propus/core@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@propus/core/-/core-0.0.6.tgz#e62ffa55ecb8ba97b58dd8dfc8f2bb83713d533e"
+  integrity sha512-IobbRIjIl6R3zxKBOwxcDKK3RnKMf23TQCneDFtUTuYBjljKwQ4HIlE+9PPeX06DRni5Eg/2PdYedAPNWwxACg==
   dependencies:
-    "@propus/utility" "^0.0.11"
+    "@propus/utility" "^0.0.12"
     react "^17.0.2"
     react-context-devtool "^2.0.3"
 
-"@propus/utility@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@propus/utility/-/utility-0.0.11.tgz#248f887664c58a4f508e2c2096cd42390bb3c6ec"
-  integrity sha512-jCpzDltN2o64m40at7IEA+HjZxF0vK+igNF4MKqKjMipKtYMMTKOHnfGShDhUXCPL16Qp46l3/v9JbhUu3ItWQ==
+"@propus/utility@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@propus/utility/-/utility-0.0.12.tgz#6c231cfd7664f64f9cf7cbc0fe84d6ebdfefa1e5"
+  integrity sha512-jBpCdyNqB4bkjgHDqYQpH8NyUYeEi2LxBl7C7t465Jdl88zBhMts0ZzowjysXp1tlYJNG26QOfrtMGUVf75ABg==
   dependencies:
     change-case "^4.1.2"
     fast-deep-equal "^3.1.3"
@@ -1220,9 +1220,9 @@ camel-case@^4.1.2:
     tslib "^2.0.3"
 
 caniuse-lite@^1.0.30001208:
-  version "1.0.30001209"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001209.tgz#1bb4be0bd118e98e21cfb7ef617b1ef2164622f4"
-  integrity sha512-2Ktt4OeRM7EM/JaOZjuLzPYAIqmbwQMNnYbgooT+icoRGrKOyAxA1xhlnotBD1KArRSPsuJp3TdYcZYrL7qNxA==
+  version "1.0.30001210"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001210.tgz#7c12d029e93b725cc2fe44a5eaabd9b838250d33"
+  integrity sha512-avmGf0Jo00I8vB0I89J4Pba48kddasErV7slu7wrkyM5uY9gE5P+B+V3hjABv8Hp4YNG2nBqIUFUXlnqNteXEA==
 
 capital-case@^1.0.4:
   version "1.0.4"
